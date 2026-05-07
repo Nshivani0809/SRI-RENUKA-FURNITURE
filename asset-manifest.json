@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/SRI-RENUKA-FURNITURE/static/css/main.39be309a.css",
+    "main.js": "/SRI-RENUKA-FURNITURE/static/js/main.b08d4d29.js",
+    "static/js/453.b886a65f.chunk.js": "/SRI-RENUKA-FURNITURE/static/js/453.b886a65f.chunk.js",
+    "index.html": "/SRI-RENUKA-FURNITURE/index.html",
+    "main.39be309a.css.map": "/SRI-RENUKA-FURNITURE/static/css/main.39be309a.css.map",
+    "main.b08d4d29.js.map": "/SRI-RENUKA-FURNITURE/static/js/main.b08d4d29.js.map",
+    "453.b886a65f.chunk.js.map": "/SRI-RENUKA-FURNITURE/static/js/453.b886a65f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39be309a.css",
+    "static/js/main.b08d4d29.js"
+  ]
+}
