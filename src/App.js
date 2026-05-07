@@ -9,7 +9,6 @@ function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   return (
-    <Router>
       <div className="app">
         <nav className="navbar">
           <div className="nav-container">
@@ -63,7 +62,6 @@ function App() {
           </div>
         </footer>
       </div>
-    </Router>
   );
 }
 
