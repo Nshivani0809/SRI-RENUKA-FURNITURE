@@ -1,0 +1,731 @@
+/* Home.css - Complete Working Version */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-minimal {
+  overflow-x: hidden;
+}
+
+.container-minimal {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-minimal {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+}
+
+.hero-content-minimal {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+.hero-text-minimal {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero-brand {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.hero-title-minimal {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.hero-title-minimal .highlight {
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-buttons-minimal {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary-minimal {
+  background: #f5a623;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.btn-primary-minimal:hover {
+  background: #e69500;
+  transform: translateY(-3px);
+}
+
+.btn-outline-minimal {
+  background: transparent;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border: 1px solid white;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.btn-outline-minimal:hover {
+  background: white;
+  color: #1a1a1a;
+  transform: translateY(-3px);
+}
+
+.btn-outline-minimal.white {
+  border-color: white;
+  color: white;
+}
+
+.btn-outline-minimal.white:hover {
+  background: white;
+  color: #1a1a1a;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.scroll-indicator span {
+  display: block;
+  font-size: 0.75rem;
+  color: white;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 50px;
+  background: white;
+  margin: 0 auto;
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0%, 100% {
+    transform: scaleY(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleY(1.5);
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   DEALERS SECTION - CLEAN CENTERED GRID
+   ============================================ */
+.dealers-clean-section {
+  padding: 4rem 0;
+  background: #fef9f0;
+}
+
+.dealers-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-tag {
+  display: inline-block;
+  background: #f5a62320;
+  color: #f5a623;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.dealers-header h2 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-top: 0.5rem;
+}
+
+.dealers-header .highlight {
+  color: #f5a623;
+}
+
+.dealers-clean-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dealer-clean-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+  cursor: pointer;
+  min-width: 120px;
+  animation: floatUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes floatUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dealer-clean-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.dealer-clean-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  border: 1px solid #eee;
+}
+
+.dealer-clean-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.dealer-clean-card span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ============================================
+   FEATURED PRODUCTS SECTION
+   ============================================ */
+.featured-minimal {
+  padding: 5rem 0;
+  background: white;
+}
+
+.section-header-minimal {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title-minimal {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.section-desc-minimal {
+  color: #666;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.products-grid-minimal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.product-card-minimal {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-image-minimal {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  background: #f5f5f5;
+  margin-bottom: 1rem;
+}
+
+.product-image-minimal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card-minimal:hover .product-image-minimal img {
+  transform: scale(1.05);
+}
+
+.product-overlay-minimal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.product-card-minimal:hover .product-overlay-minimal {
+  opacity: 1;
+}
+
+.product-link {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-bottom: 1px solid white;
+  padding-bottom: 0.25rem;
+}
+
+.product-info-minimal {
+  text-align: center;
+}
+
+.product-cat {
+  font-size: 0.75rem;
+  color: #999;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.product-info-minimal h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.product-price {
+  font-size: 1rem;
+  color: #f5a623;
+  font-weight: 500;
+}
+
+/* ============================================
+   CATEGORIES GRID
+   ============================================ */
+.categories-minimal {
+  padding: 5rem 0;
+  background: #f8f8f8;
+}
+
+.categories-grid-minimal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.category-card-minimal {
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.category-image-minimal {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+
+.category-image-minimal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.category-card-minimal:hover .category-image-minimal img {
+  transform: scale(1.05);
+}
+
+.category-content-minimal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  transform: translateY(0);
+  transition: transform 0.3s;
+}
+
+.category-card-minimal:hover .category-content-minimal {
+  transform: translateY(-10px);
+}
+
+.category-content-minimal h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.category-content-minimal p {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.category-arrow {
+  font-size: 0.8rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.category-card-minimal:hover .category-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+.about-minimal {
+  padding: 5rem 0;
+  background: white;
+}
+
+.about-grid-minimal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text-minimal h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.about-text-minimal p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.about-stats {
+  display: flex;
+  gap: 3rem;
+}
+
+.stat-minimal {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f5a623;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.about-image-minimal {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.about-image-minimal img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.cta-minimal {
+  padding: 4rem 0;
+  background: #f5a623;
+}
+
+.cta-content-minimal {
+  text-align: center;
+  color: white;
+}
+
+.cta-content-minimal h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.cta-content-minimal p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.cta-address-minimal {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.cta-address-minimal p {
+  margin-bottom: 0.25rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1200px) {
+  .products-grid-minimal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .categories-grid-minimal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .dealers-clean-grid {
+    gap: 1.5rem;
+  }
+  
+  .dealer-clean-card {
+    min-width: 110px;
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title-minimal {
+    font-size: 2rem;
+  }
+  
+  .section-title-minimal {
+    font-size: 1.8rem;
+  }
+  
+  .products-grid-minimal {
+    grid-template-columns: 1fr;
+  }
+  
+  .categories-grid-minimal {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-grid-minimal {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .hero-buttons-minimal {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-primary-minimal,
+  .btn-outline-minimal {
+    width: 80%;
+    text-align: center;
+  }
+  
+  .about-stats {
+    justify-content: center;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dealers-clean-grid {
+    gap: 1rem;
+  }
+  
+  .dealer-clean-card {
+    min-width: 100px;
+    padding: 0.7rem 1rem;
+  }
+  
+  .dealer-clean-logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .dealer-clean-card span {
+    font-size: 0.65rem;
+    white-space: normal;
+    text-align: center;
+  }
+  
+  .dealers-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .dealers-clean-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .dealer-clean-card {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .hero-title-minimal {
+    font-size: 1.5rem;
+  }
+  
+  .hero-brand {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+  }
+  
+  .section-title-minimal {
+    font-size: 1.3rem;
+  }
+  
+  .product-image-minimal {
+    height: 250px;
+  }
+  
+  .category-image-minimal {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-minimal {
+    padding: 0 1rem;
+  }
+  
+  .dealers-clean-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  
+  .dealer-clean-card {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.8rem;
+  }
+  
+  .dealer-clean-logo {
+    margin-bottom: 0;
+  }
+  
+  .dealer-clean-card span {
+    white-space: nowrap;
+  }
+}

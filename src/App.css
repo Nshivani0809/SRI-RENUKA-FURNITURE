@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+/* Navbar */
+.navbar {
+  background: #ffffff;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo h2 {
+  font-size: 1.5rem;
+  color: #2d2d2d;
+}
+
+.logo p {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #2d2d2d;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #f5a623;
+}
+
+.call-btn {
+  background: #f5a623;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  color: white !important;
+}
+
+.call-btn:hover {
+  background: #e69500;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background: #1a1a1a;
+  color: white;
+  margin-top: 0;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+.footer-section h4 {
+  margin-bottom: 1rem;
+  color: #f5a623;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.footer-section a:hover {
+  opacity: 1;
+}
+
+.footer-section p {
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: white;
+    flex-direction: column;
+    padding: 2rem;
+    transition: left 0.3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  .nav-menu.active {
+    left: 0;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
