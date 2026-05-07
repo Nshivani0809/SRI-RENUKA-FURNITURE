@@ -178,16 +178,16 @@
 }
 
 /* ============================================
-   DEALERS SECTION - CLEAN CENTERED GRID
+   PROFESSIONAL DEALERS SECTION
    ============================================ */
-.dealers-clean-section {
+.dealers-professional-section {
   padding: 4rem 0;
   background: #fef9f0;
 }
 
 .dealers-header {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .section-tag {
@@ -211,26 +211,29 @@
   color: #f5a623;
 }
 
-.dealers-clean-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+.dealers-subtitle {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.dealers-professional-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.dealer-clean-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.dealer-professional-card {
   background: white;
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
   transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   cursor: pointer;
-  min-width: 120px;
   animation: floatUp 0.6s ease forwards;
   opacity: 0;
 }
@@ -246,37 +249,50 @@
   }
 }
 
-.dealer-clean-card:hover {
+.dealer-professional-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
-.dealer-clean-logo {
-  width: 60px;
-  height: 60px;
+.dealer-professional-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
   border-radius: 50%;
   overflow: hidden;
   background: #f8f9fa;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.75rem;
   border: 1px solid #eee;
 }
 
-.dealer-clean-logo img {
+.dealer-professional-logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 10px;
+  padding: 12px;
 }
 
-.dealer-clean-card span {
-  font-size: 0.75rem;
-  font-weight: 500;
+.dealer-professional-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
   color: #1a1a1a;
-  text-align: center;
-  white-space: nowrap;
+  margin-bottom: 0.25rem;
+}
+
+.dealer-tagline {
+  font-size: 0.7rem;
+  color: #f5a623;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+.dealer-slogan {
+  font-size: 0.65rem;
+  color: #888;
+  font-style: italic;
 }
 
 /* ============================================
@@ -592,13 +608,9 @@
 }
 
 @media (max-width: 992px) {
-  .dealers-clean-grid {
+  .dealers-professional-grid {
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-  }
-  
-  .dealer-clean-card {
-    min-width: 110px;
-    padding: 0.8rem 1.2rem;
   }
 }
 
@@ -644,24 +656,8 @@
     align-items: center;
   }
   
-  .dealers-clean-grid {
-    gap: 1rem;
-  }
-  
-  .dealer-clean-card {
-    min-width: 100px;
-    padding: 0.7rem 1rem;
-  }
-  
-  .dealer-clean-logo {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .dealer-clean-card span {
-    font-size: 0.65rem;
-    white-space: normal;
-    text-align: center;
+  .dealers-professional-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .dealers-header h2 {
@@ -669,17 +665,9 @@
   }
 }
 
-@media (max-width: 580px) {
-  .dealers-clean-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+@media (max-width: 480px) {
+  .container-minimal {
     padding: 0 1rem;
-  }
-  
-  .dealer-clean-card {
-    min-width: auto;
-    width: 100%;
   }
   
   .hero-title-minimal {
@@ -702,30 +690,26 @@
   .category-image-minimal {
     height: 280px;
   }
-}
-
-@media (max-width: 480px) {
-  .container-minimal {
-    padding: 0 1rem;
-  }
   
-  .dealers-clean-grid {
+  .dealers-professional-grid {
     grid-template-columns: 1fr;
-    gap: 0.8rem;
   }
   
-  .dealer-clean-card {
-    flex-direction: row;
-    justify-content: center;
+  .dealer-professional-card {
+    display: flex;
+    align-items: center;
+    text-align: left;
     gap: 1rem;
-    padding: 0.8rem;
+    padding: 1rem;
   }
   
-  .dealer-clean-logo {
-    margin-bottom: 0;
+  .dealer-professional-logo {
+    width: 60px;
+    height: 60px;
+    margin: 0;
   }
   
-  .dealer-clean-card span {
-    white-space: nowrap;
+  .dealer-professional-info h3 {
+    font-size: 1rem;
   }
 }
